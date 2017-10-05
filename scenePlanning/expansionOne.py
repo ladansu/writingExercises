@@ -1,5 +1,7 @@
 # a prompt series that outputs a scene plan
-# next action: ask the adversary's goal
+# here is a test comment
+# next action: get github plugins for atom, discuss what to actually do,
+# then study classes to create a new data type and improve the obstacle section
 
 # prepare to receive yes/no resposes from the user
 affirmativeResponses = ['yes', 'y', 'yep', 'affirmative']
