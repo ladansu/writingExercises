@@ -1,26 +1,25 @@
 # a prompt series that outputs a scene plan
-# here is a test comment
 # next action: get github plugins for atom, discuss what to actually do,
 # then study classes to create a new data type and improve the obstacle section
 
 # prepare to receive yes/no resposes from the user
 affirmativeResponses = ['yes', 'y', 'yep', 'affirmative']
 negativeResponses = ['no', 'n', 'nope', 'negative']
-def elicitYesOrNoResponse(): # forces yes/no response from user
+def elicitYesOrNoResponse():  # forces yes/no response from user
     x = input()
     if x.lower() in affirmativeResponses:
         return "yes"
     elif x.lower() in negativeResponses:
-         return "no"
+        return "no"
     else:
-         print('Please respond "yes" or "no".')
-         return elicitYesOrNoResponse()
+        print('Please respond "yes" or "no".')
+        return elicitYesOrNoResponse()
 
 # collect the major structural info for the scene
 POVCharacter = input("What's the name of the point-of-view character?\n")
 goal = input('What is ' + POVCharacter + "'s goal during this scene?\n")
 
-def getObstacle(): # learn the adversary or obstacle name
+def getObstacle():  # learn the adversary or obstacle name
     print("Will another person get in " + POVCharacter + "'s way?")
     if elicitYesOrNoResponse() == "yes":
         print("Who will it be?")
@@ -34,7 +33,7 @@ def getObstacle(): # learn the adversary or obstacle name
         return input()
 obstacle = getObstacle()
 
-#yes, but/no, and
+# yes, but/no, and
 print('Will ' + POVCharacter + ' achieve "' + goal + '"?')
 elicitSuccessOrFailure = elicitYesOrNoResponse()
 if elicitSuccessOrFailure == "yes":
