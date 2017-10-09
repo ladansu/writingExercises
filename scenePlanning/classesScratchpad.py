@@ -31,17 +31,13 @@ scruffles = Cat()
 lulu.speak()
 scruffles.speak()
 
-rubesAndBlegs = []
 class bleg():
-    def __init__(self):
-        rubesAndBlegs.append(self)
-
+   pass
 class rube():
-    def __init__(self):
-        rubesAndBlegs.append(self)
+   pass
 
 thing1 = bleg()
-thing2 = bleg()
+thing2 = rube()
 thing3 = rube()
 
-print(rubesAndBlegs)
+listOfRubesAndBleg = [thing1, thing2, thing3]
