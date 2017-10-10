@@ -1,26 +1,38 @@
 # objective: define the MRU class
 
-#next time: understand why the linter says "dog has no attribute derp"
+#next time: re-write the dog program so each quality is an attribute
 
 # here's a toy program max made for me to study
-class Dog():
-    def __str__(self):
-        qualities = [value + " " + property for property, value in self.__dict__.items()]
-        if qualities:
-          return "I'm a " + ", ".join(qualities) + " dog"
-        else:
-          return "I'm a featureless dog on a frictionless plane"
-    def speak(self):
-        print("Woof!")
+#class Dog():
+#    def __str__(self):
+#        qualities = [muchness + " " + characteristic for characteristic, muchness in self.__dict__.items()]
+#        if qualities:
+#          return "I'm a " + ", ".join(qualities) + " dog"
+#        else:
+#          return "I'm a featureless dog on a frictionless plane"
+#    def speak(self):
+#        print("Woof!")
 
-lulu = Dog()
-print(lulu)
+#lulu = Dog()
+#print(lulu)
+#lulu.size = "large"
+#lulu.derp = "medium"
+#lulu.fluff = "low"
+#print(lulu)
+
+#lulu.cute = "lots"
+#print(lulu)
+
+# i want each dog room to have a dictionary with keys size, derp, and fluff,
+# but values that aren't filled in yet.
+class Dog:
+    
+
+lulu = Dog
 lulu.size = "large"
 lulu.derp = "medium"
 lulu.fluff = "low"
-print(lulu)
 
-lulu.cute = "lots"
 print(lulu)
 
 class Cat:
@@ -28,7 +40,7 @@ class Cat:
         print("Meow!")
 scruffles = Cat()
 
-lulu.speak()
+#lulu.speak()
 scruffles.speak()
 
 class bleg():
@@ -36,8 +48,5 @@ class bleg():
 class rube():
    pass
 
-thing1 = bleg()
-thing2 = rube()
-thing3 = rube()
-
-listOfRubesAndBleg = [thing1, thing2, thing3]
+listOfRubesAndBleg = [bleg(), rube(), rube()]
+print(listOfRubesAndBleg)
