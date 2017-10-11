@@ -23,17 +23,22 @@
 #lulu.cute = "lots"
 #print(lulu)
 
-# i want each dog room to have a dictionary with keys size, derp, and fluff,
-# but values that aren't filled in yet.
-class Dog:
-    
+#when the constructor does it
+class Dog():
+    def __init__(self, size, fluff, derp):
+        self.size = size
+        self.fluff = fluff
+        self.derp = derp
 
-lulu = Dog
-lulu.size = "large"
-lulu.derp = "medium"
-lulu.fluff = "low"
+lulu = Dog("large", "low", "medium")
+print(lulu.size, lulu.fluff, lulu.derp)
 
-print(lulu)
+#class Dog(x,y,z)
+#    size = x
+#    fluff = y
+#    derp = z
+#lulu = Dog(large, low, medium)
+#print(lulu)
 
 class Cat:
     def speak(self):
@@ -50,3 +55,19 @@ class rube():
 
 listOfRubesAndBleg = [bleg(), rube(), rube()]
 print(listOfRubesAndBleg)
+
+# the kangaroo toy program max gave me to study
+class Animal:
+    def jump(self):
+        print("Boing!")
+
+    def is_marsupial(self):
+        return False
+
+class Kangaroo(Animal):
+    def is_marsupial(self):
+        return True
+
+k = Kangaroo()
+print(k.is_marsupial())
+k.jump()
